@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Apple</title>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📱 Control de Stock Apple</h1>
+
+    <!-- Formulario -->
+    <section class="formulario">
+
+        <h2>Agregar Equipo</h2>
+
+        <form id="formProducto">
+
+            <input type="text"
+                   id="modelo"
+                   placeholder="Modelo (Ej: iPhone 13)"
+                   required>
+
+            <input type="text"
+                   id="capacidad"
+                   placeholder="Capacidad (Ej: 128GB)"
+                   required>
+
+            <input type="text"
+                   id="color"
+                   placeholder="Color"
+                   required>
+
+            <input type="number"
+                   id="bateria"
+                   placeholder="Batería (%)"
+                   min="1"
+                   max="100"
+                   required>
+
+            <select id="estado" required>
+                <option value="">Estado</option>
+                <option value="Nuevo">Nuevo</option>
+                <option value="Usado">Usado</option>
+                <option value="Vendido">Vendido</option>
+            </select>
+
+            <input type="number"
+                   id="precio"
+                   placeholder="Precio"
+                   required>
+
+            <button type="submit">
+                Agregar Equipo
+            </button>
+
+        </form>
+
+    </section>
+
+    <!-- Buscador -->
+    <section class="busqueda">
+
+        <input type="text"
+               id="buscar"
+               placeholder="Buscar modelo...">
+    
+    </section>
+    
+    <!-- Contador -->
+    <div class="resumen">
+    <br>
+    <h3>
+        Total de equipos:
+        <span id="totalEquipos">0</span>
+    </h3>
+    <br>
+    <h3>
+        Valor inventario:
+        <span id="valorInventario">$0</span>
+    </h3>
+
+</div>
+
+    <!-- Tabla -->
+    <section class="listado">
+        <br>
+        <h2>Listado de Equipos</h2>
+
+        <table id="tablaProductos">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Modelo</th>
+                    <th>Capacidad</th>
+                    <th>Color</th>
+                    <th>Batería</th>
+                    <th>Estado</th>
+                    <th>Precio</th>
+                    <th>FechaIngreso</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <!-- JS cargará los datos aquí -->
+            </tbody>
+
+        </table>
+
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
